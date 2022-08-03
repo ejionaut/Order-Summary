@@ -1,0 +1,194 @@
+:root{
+    --pblue: hsl(225, 100%, 94%);
+    --brblue: hsl(245, 75%, 52%);
+    --v-pblue: hsl(225, 100%, 98%);
+    --desblue: hsl(224, 23%, 55%);
+    --drkblue: hsl(223, 47%, 23%);
+    --purblue: hsl(245, 61%, 68%);
+  }
+
+  *{
+    margin: 0;
+    border: 0;
+    font-family: "Red Hat Display";
+  }
+
+  body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--pblue);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+  }
+
+  /*CSS reset*/
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Card Design*/
+  .Main-Card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    padding: 0 0 2.2rem 0;
+  }
+
+  .Text-Section{
+    padding: 2rem 0 0 0;
+  }
+
+  .Image-Head{
+    border-radius: 20px 20px 0 0;
+  }
+
+  .Main-Header,
+  .Main-P{
+    text-align: center;
+  }
+
+  .Main-Header{
+    color: var(--drkblue);
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .Main-P{
+    max-width: 20rem;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--desblue);
+
+    margin-bottom: 1rem;
+  }
+
+  .Plan-Section{
+    background-color: var(--v-pblue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .Plan-Inner-Section{
+    margin-left: 1rem;
+  }
+
+  .Plan-Header,
+  .Plan-P{
+    font-size: 1rem;
+  }
+
+  .Plan-Header{
+    color: var(--drkblue);
+  }
+
+  .Plan-P{
+    color: var(--desblue);
+  }
+
+  .Plan-Change{
+    font-size: 0.8rem;
+    margin-left: 5.2rem;
+    color: var(--brblue);
+    text-decoration: underline;
+
+    background-color: var(--v-pblue);
+  }
+
+  .Choice-Section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Proceed-Button{
+    font-weight: bold;
+    background-color: var(--brblue);
+    color: white;
+    box-shadow: 0 1rem 0.8rem hsla(245, 75%, 52%, 0.1);
+
+    border-radius: 0.6rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 0;
+  }
+
+  .Cancel-Button{
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    color: var(--desblue);
+  }
+
+  .attribution { 
+    font-size: 11px; text-align: center; 
+  }
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+  }
+
+  .Plan-Change:hover,
+  .Proceed-Button:hover,
+  .Cancel-Button:hover{
+    cursor: pointer;
+  }
+
+  .Proceed-Button:hover{
+    background-color: var(--purblue);
+  }
+
+  .Plan-Change:hover{
+    color: var(--purblue);
+  }
+
+  .Cancel-Button:hover{
+    color: var(--drkblue);
+  }
+
+  @media all and (max-width: 650px){
+    body{
+      padding: 5rem;
+      background-image: url(./images/pattern-background-mobile.svg);
+    }
+
+    .Main-Card{
+      width: 18rem;
+    }
+
+    .Text-Section{
+      padding: 1rem;
+    }
+
+    .Main-Header{
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    .Main-P{
+      width: 15rem;
+    }
+
+    .Plan-Header,
+    .Plan-P{
+      font-size: 0.8rem;
+    }
+
+    .Plan-Change{
+      margin-left: 2.6rem;
+    }
+
+  }
